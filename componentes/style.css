@@ -1,0 +1,56 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color-principal-fondo: #8DA9C4;
+    --color-titulos: #0B2545;
+    --color-texto: #EEF4ED;
+    --color-botones: #40798c;
+    --fuente-principal: "TASA Explorer", sans-serif;
+    --max-width-container: 1200px; /* ancho del contenido*/
+    --color-navbar: #b0c4b1;
+}
+
+.navbar{
+    background-color: var(--color-texto);
+}
+
+body{
+    color: var(--color-texto);
+    background-color: var(--color-principal-fondo);
+    font-family: var(--fuente-principal);
+}
+.container h1 span{
+    color: var(--color-titulos);
+}
+button{
+    color: #0B2545;
+}
+img{
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 100px 1;
+    width: 200px;
+    box-shadow: 0px 15px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (hover: hover){
+    img:hover{
+        transform: translateY(-8px);
+        box-shadow: 0px 20px 30px rgba(0,0,0,0.25);
+    }
+}
+.card.card-body{
+    color: var(--color-titulos)
+}
+
+.card, .card .list-group-item{
+    background-color: var(--color-texto);
+}
+
+h5.card-title{
+    color: var(--color-titulos);
+ }
