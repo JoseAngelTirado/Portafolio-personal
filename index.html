@@ -4,21 +4,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Componentes </title>
-  <!-- Enlace del CDN de Boostrap -->
+  <title>Componentes</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN2tE5YBujZqJLB" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=TASA+Explorer:wght@400..800&display=swap" rel="stylesheet">
   <link rel="icon" href="/img/usuario.png">
-  <link rel="stylesheet" href="/componentes/style.css">
+  <link rel="stylesheet" href="/style.css">
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<!-- Add Scrollspy to the body and link it to your navbar -->
+<body class="d-flex flex-column min-vh-100" data-bs-spy="scroll" data-bs-target="#navbar-scroll" data-bs-offset="100">
 
-  <nav class="navbar navbar-expand-lg" >
-    <div class="container-fluid mb-2">
+  <!-- Update your nav: add an ID for Scrollspy and change the links -->
+  <nav id="navbar-scroll" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
       <a class="navbar-brand" href="#">JAT</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,148 +26,154 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            <!-- Link to the Inicio section -->
+            <a class="nav-link" href="#inicio">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Sobre mí</a>
+            <!-- Link to the SobreMi section -->
+            <a class="nav-link" href="#sobre-mi">Sobre mí</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Mi experiencia
             </a>
             <ul class="dropdown-menu">
+              <!-- Link to the Habilidades section -->
+              <li><a class="dropdown-item" href="#habilidades">Habilidades</a></li>
+              <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="https://mexico.generation.org/">Trabajo</a></li>
               <li><a class="dropdown-item" href="https://goynmexico.org/">Voluntariado</a></li>
               <li><a class="dropdown-item" href="https://technolatinas.org/">Comunidades</a></li>
             </ul>
           </li>
         </ul>
-        <!--<form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
-          <button class="btn btn-outline-secondary" type="submit">Buscar</button>-->
-        </form>
       </div>
     </div>
   </nav>
 
-  <!--Contenedor para la fila y las dos columnas principales-->
-  <main class="container my-5 flex-grow-1">
-    <div class="row align-items-center text-center">
+  <!-- Main content area, with padding to account for the fixed navbar -->
+  <main class="container mt-5 pt-5 flex-grow-1">
+
+    <!-- Inicio Section -->
+    <section id="inicio" class="row align-items-center text-center py-5">
+      <!-- ... (your existing "inicio" content remains the same) ... -->
       <div class="col-md-6">
         <h1 class="display-4 fw-bold">Soy <span class="nombre">José Ángel Tirado</span></h1>
-        <!-- my: utulidad de espaciado-->
         <p class="lead my-3">Desarrollador Web egresado de Matemáticas Aplicadas y Computación</p>
         <div class="d-grid gap-2">
-          <a href="https://www.linkedin.com/in/jose-angel-tirado/" class="btn btn-outline-secondary btn-lg" target="_blank" rel="noopener noreferrer">Conecta conmigo</a>
+          <a href="https://www.linkedin.com/in/jose-angel-tirado/" class="btn btn-outline-secondary btn-lg"
+            target="_blank" rel="noopener noreferrer">Conecta conmigo</a>
         </div>
       </div>
       <div class="col-md-6 mt-4 mt-md-0">
         <img src="/img/20250624_152234.jpg" class="img-fluid rounded-square">
       </div>
-    </div>
+    </section>
 
-<!--collapse-->
-<div class="my-5">
-  <p class="d-inline-flex gap-1">
-    <a class="btn btn-outline-secondary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
-      aria-expanded="false" aria-controls="multiCollapseExample1">Resumen de mi perfil</a>
-    <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse"
-      data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Certificaciones</button>
-  </p>
-  <div class="row">
-    <div class="col">
-      <div class="collapse multi-collapse" id="multiCollapseExample1">
-        <div class="card card-body">
-          Desarrollador egresado de Matemáticas aplicadas y computación especializado en desarrollo
-          Backend con Java y bases de datos. Experiencia académica en proyectos con Spring Boot y
-          React, así como en ciberseguridad, Quiero integrarme a proyectos de desarrollo profesionales.
-          Me caracterizo por ser proactivo, con habilidades de trabajo en equipo y un enfoque en el
-          aprendizaje continuo de tecnologías emergentes.
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="collapse multi-collapse" id="multiCollapseExample2">
-        <div class="card card-body">
-          <p>Command Line in Linux Coursera  Mayo 2025</p>
-          <p>Introduction to Cybersecurity CISCO Networking Academy Junio 2025</p>
-          <p>NeyworkingBasics Agosto 2025</p>
-          <p>Learning How to Learn: Powerful mental tools to help you master tough subjects Septiembre 2025</p>
-          <a href="https://github.com/JoseAngelTirado/CertificadosJoseAngelTirado">Certificados</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-    <!--Segunda fila del grid Seccion de las tarjetas-->
-    <div class="row my-5 justify-content-center">
-
-      <!--columna de Tarjeta de habilidaes tecnicas-->
-      <div class="col my-3 ">
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title fw-bold"><span>Habilidades Técnicas</span></h5>
+    <!-- Sobre Mi Section -->
+    <section id="sobre-mi" class="py-5">
+      <h2>Sobre Mí</h2>
+      <!-- Your collapse components go inside this section -->
+      <div class="my-5">
+        <p class="d-inline-flex gap-1">
+          <a class="btn btn-outline-secondary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
+            aria-expanded="false" aria-controls="multiCollapseExample1">Resumen de mi perfil</a>
+          <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse"
+            data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Certificaciones</button>
+        </p>
+        <div class="row">
+          <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample1">
+              <div class="card card-body">
+                Desarrollador egresado de Matemáticas aplicadas y computación especializado en desarrollo
+                Backend con Java y bases de datos. Experiencia académica en proyectos con Spring Boot y
+                React, así como en ciberseguridad, Quiero integrarme a proyectos de desarrollo profesionales.
+                Me caracterizo por ser proactivo, con habilidades de trabajo en equipo y un enfoque en el
+                aprendizaje continuo de tecnologías emergentes.
+              </div>
+            </div>
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">SpringBoot</li>
-            <li class="list-group-item">My SQL</li>
-            <li class="list-group-item">JavaScript</li>
-          </ul>
-        </div>
-      </div>
-
-      <!--Columna de Tarjeta de Experiencia-->
-      <div class="col my-3">
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Experiencia</h5>
+          <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample2">
+              <div class="card card-body">
+                <p>Command Line in Linux Coursera Mayo 2025</p>
+                <p>Introduction to Cybersecurity CISCO Networking Academy Junio 2025</p>
+                <p>NeyworkingBasics Agosto 2025</p>
+                <p>Learning How to Learn: Powerful mental tools to help you master tough subjects Septiembre 2025</p>
+                <a href="https://github.com/JoseAngelTirado/CertificadosJoseAngelTirado">Certificados</a>
+              </div>
+            </div>
           </div>
-          <ul class="list-group list-group-flush bg">
-            <li class="list-group-item bg">Proyecto para getion de RH</li>
-            <li class="list-group-item">Front-end Calculadora de riesgos</li>
-            <li class="list-group-item">E-comerce Booton calli</li>
-          </ul>
         </div>
       </div>
+    </section>
 
-      <!-- Columna de tarjeta de habilidades blandas-->
-      <div class="col my-3">
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Habilidades Blandas</h5>
+    <!-- Habilidades Section - Contains your cards in a proper grid -->
+    <section id="habilidades" class="py-5">
+      <h2>Habilidades y Experiencia</h2>
+      <div class="row my-5 justify-content-center">
+        <!-- Each card is inside a column for proper side-by-side layout -->
+        <div class="col-md-4 my-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Habilidades Técnicas</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">SpringBoot</li>
+              <li class="list-group-item">My SQL</li>
+              <li class="list-group-item">JavaScript</li>
+            </ul>
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Trabajo en equipo</li>
-            <li class="list-group-item">Resilencia</li>
-            <li class="list-group-item">Receptividad y comprensión</li>
-          </ul>
+        </div>
+
+        <div class="col-md-4 my-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Experiencia</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Proyecto para gestión de RH</li>
+              <li class="list-group-item">Front-end Calculadora de riesgos</li>
+              <li class="list-group-item">E-comerce Booton calli</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-4 my-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Habilidades Blandas</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Trabajo en equipo</li>
+              <li class="list-group-item">Resiliencia</li>
+              <li class="list-group-item">Receptividad y comprensión</li>
+            </ul>
+          </div>
         </div>
       </div>
-
-    </div>
+    </section>
 
   </main>
 
-  <!-- Footer -->
-<footer class="bg-dark text-white text-center py-4 mt-auto">
-  <div class="container">
-    <p class="mb-1">&copy; 2025 José Ángel Tirado. Todos los derechos reservados.</p>
-    <div>
-      <a href="https://www.linkedin.com/in/jose-angel-tirado/" target="_blank" class="text-white me-3">
-        <i class="bi bi-linkedin"></i> LinkedIn
-      </a>
-      <a href="https://github.com/JoseAngelTirado" target="_blank" class="text-white me-3">
-        <i class="bi bi-github"></i> GitHub
-      </a>
-      <a href="j.angel.tirado20@gmail.com" class="text-white">
-        <i class="bi bi-envelope-fill"></i> Email
-      </a>
+  <footer class="bg-dark text-white text-center py-4 mt-auto">
+    <!-- ... (your existing footer remains the same) ... -->
+    <div class="container">
+      <p class="mb-1">&copy; 2025 José Ángel Tirado. Todos los derechos reservados.</p>
+      <div>
+        <a href="https://www.linkedin.com/in/jose-angel-tirado/" target="_blank" class="text-white me-3">
+          <i class="bi bi-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://github.com/JoseAngelTirado" target="_blank" class="text-white me-3">
+          <i class="bi bi-github"></i> GitHub
+        </a>
+        <a href="j.angel.tirado20@gmail.com" class="text-white">
+          <i class="bi bi-envelope-fill"></i> Email
+        </a>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-  <!-- Script de Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
